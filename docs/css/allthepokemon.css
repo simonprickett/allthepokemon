@@ -1,0 +1,18 @@
+/* allthepokemon.css */
+
+#pokemon {
+	margin-top: 10px;
+	width: 80%;
+}
+
+.onePokemon {
+	width: 200px;
+	height: 200px;
+	float: left;
+	text-align: center;
+}
+
+.pokemonPlaceholder {
+	font-size: 3em;
+	font-weight: bold;
+}
