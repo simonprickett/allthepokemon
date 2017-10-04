@@ -14,10 +14,10 @@ var allThePokemon = {
 		}
 
 		for (n = 1; n <= allThePokemon.maxNationalIndex; n++) {
-			$.ajax('http://pokeapi.co/api/v1/pokemon/' + n + '/')
+			$.ajax(' http://pokeapi.salestock.net/api/v2/pokemon/' + n + '/')
 				.done(function(pokemon) {
-					console.log('looking for #pokemon' + Number(pokemon.national_id));
-					$('#pokemon' + Number(pokemon.national_id)).html('<img class="pokemonImage" src="http://pokeapi.co/media/img/' + Number(pokemon.national_id) + '.png" alt="Pokemon Image"/>' + '<br/><span class="pokemonName">(#' + pokemon.national_id + ') ' + pokemon.name + '</span>');
+					console.log('looking for #pokemon' + Number(pokemon.id));
+					$('#pokemon' + Number(pokemon.id)).html('<img class="pokemonImage" src="' + pokemon.sprites.front_default + '" alt="Pokemon Image"/>' + '<br/><span class="pokemonName">(#' + pokemon.id + ') ' + pokemon.name + '</span>');
 				})
 				.fail(function() {
 					console.log('Error getting pokemon detail :(');
