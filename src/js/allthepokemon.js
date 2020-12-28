@@ -14,7 +14,7 @@ var allThePokemon = {
 		}
 
 		for (n = 1; n <= allThePokemon.maxNationalIndex; n++) {
-			$.ajax(' http://pokeapi.salestock.net/api/v2/pokemon/' + n + '/')
+			$.ajax('https://pokeapi.co/api/v2/pokemon/' + n + '/')
 				.done(function(pokemon) {
 					console.log('looking for #pokemon' + Number(pokemon.id));
 					$('#pokemon' + Number(pokemon.id)).html('<img class="pokemonImage" src="' + pokemon.sprites.front_default + '" alt="Pokemon Image"/>' + '<br/><span class="pokemonName">(#' + pokemon.id + ') ' + pokemon.name + '</span>');
